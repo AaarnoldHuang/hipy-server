@@ -39,7 +39,7 @@ class AuthorizationMiddleware(BaseHTTPMiddleware):
 
 middleware = [
     # 跨域中间件
-    Middleware(CORSMiddleware, allow_origins=settings.BACKEND_CORS_ORIGINS,
+    Middleware(CORSMiddleware, allow_origins=["*"],
                            allow_credentials=True, allow_methods=["*"], allow_headers=["*"]),
     # 日志中间件
     Middleware(LoggerMiddleware),
